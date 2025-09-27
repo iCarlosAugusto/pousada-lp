@@ -1,18 +1,18 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { useLanguage } from "@/contexts/language-context"
 
 export function PhotoGallery() {
   const { t } = useLanguage()
-  const [selectedCategory, setSelectedCategory] = useState(t.gallery.categories.all)
+  const [selectedCategory, setSelectedCategory] = useState("all")
   const categories = [
-    t.gallery.categories.all, 
-    t.gallery.categories.cachoeiras,
-    t.gallery.categories.wildlife, 
-    t.gallery.categories.adventure
+    { key: "all", label: t.gallery.categories.all }, 
+    { key: "cachoeiras", label: t.gallery.categories.cachoeiras },
+    { key: "wildlife", label: t.gallery.categories.wildlife }, 
+    { key: "adventure", label: t.gallery.categories.adventure }
   ]
 
   const photos = [
@@ -20,62 +20,70 @@ export function PhotoGallery() {
       id: 1,
       src: "/cachoeiras/couros.png",
       caption: t.gallery.photos["1"].caption,
-      category: t.gallery.categories.cachoeiras,
+      category: "cachoeiras",
+      categoryLabel: t.gallery.categories.cachoeiras,
       location: t.gallery.photos["1"].location,
     },
     {
       id: 2,
       src: "/cachoeiras/santa_barbara.png",
       caption: t.gallery.photos["2"].caption,
-      category: t.gallery.categories.cachoeiras,
+      category: "cachoeiras",
+      categoryLabel: t.gallery.categories.cachoeiras,
       location: t.gallery.photos["2"].location,
     },
     {
       id: 3,
       src: "/cachoeiras/vale_da_lua.png",
       caption: t.gallery.photos["3"].caption,
-      category: t.gallery.categories.cachoeiras,
+      category: "cachoeiras",
+      categoryLabel: t.gallery.categories.cachoeiras,
       location: t.gallery.photos["3"].location,
     },
     {
       id: 7,
       src: "/cachoeiras/cachoeira_2.png",
       caption: t.gallery.photos["7"].caption,
-      category: t.gallery.categories.cachoeiras,
+      category: "cachoeiras",
+      categoryLabel: t.gallery.categories.cachoeiras,
       location: t.gallery.photos["7"].location,
     },
     {
       id: 9,
       src: "/passeio_estelar.png",
       caption: t.gallery.photos["9"].caption,
-      category: t.gallery.categories.adventure,
+      category: "adventure",
+      categoryLabel: t.gallery.categories.adventure,
       location: t.gallery.photos["9"].location,
     },
     {
       id: 10,
       src: "/trilha_couros.png",
       caption: t.gallery.photos["10"].caption,
-      category: t.gallery.categories.wildlife,
+      category: "wildlife",
+      categoryLabel: t.gallery.categories.wildlife,
       location: t.gallery.photos["10"].location,
     },
     {
       id: 11,
       src: "/indio.png",
       caption: t.gallery.photos["11"].caption,
-      category: t.gallery.categories.wildlife,
+      category: "wildlife",
+      categoryLabel: t.gallery.categories.wildlife,
       location: t.gallery.photos["11"].location,
     },
     {
       id: 12,
       src: "/por_do_sol.png",
       caption: t.gallery.photos["12"].caption,
-      category: t.gallery.categories.adventure,
+      category: "adventure",
+      categoryLabel: t.gallery.categories.adventure,
       location: t.gallery.photos["12"].location,
     },
   ]
 
   const filteredPhotos =
-    selectedCategory === t.gallery.categories.all ? photos : photos.filter((photo) => photo.category === selectedCategory)
+    selectedCategory === "all" ? photos : photos.filter((photo) => photo.category === selectedCategory)
 
   return (
     <section id="gallery" className="py-20 bg-background">
@@ -91,15 +99,15 @@ export function PhotoGallery() {
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((category) => (
             <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
+              key={category.key}
+              onClick={() => setSelectedCategory(category.key)}
               className={`px-4 py-2 rounded-full transition-all duration-200 ${
-                selectedCategory === category
+                selectedCategory === category.key
                   ? "bg-primary text-primary-foreground shadow-md"
                   : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
               }`}
             >
-              {category}
+              {category.label}
             </button>
           ))}
         </div>
@@ -125,7 +133,7 @@ export function PhotoGallery() {
                       {photo.location}
                     </Badge>
                     <Badge variant="outline" className="border-white/30 text-white text-xs">
-                      {photo.category}
+                      {photo.categoryLabel}
                     </Badge>
                   </div>
                 </div>

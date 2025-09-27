@@ -96,13 +96,6 @@ export function Footer() {
                   +55 62 9940-2421
                 </a>
               </div>
-              
-              <div className="group flex items-center gap-3 p-3 rounded-lg bg-slate-800/50 border border-slate-700/50 hover:border-emerald-400/30 transition-all duration-300">
-                <Mail className="h-5 w-5 text-emerald-400 flex-shrink-0" />
-                <a href="mailto:info@adventureguides.com" className="text-slate-300 hover:text-white transition-colors">
-                  info@adventureguides.com
-                </a>
-              </div>
             </div>
           </div>
         </div>
