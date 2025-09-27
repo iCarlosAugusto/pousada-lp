@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/language-context"
 
 export function Footer() {
   const { t } = useLanguage()
-  
+
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Instagram, href: "https://www.instagram.com/lifetoviagens/", label: "Instagram" },
@@ -22,7 +22,7 @@ export function Footer() {
   return (
     <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-primary">Life to Viagens</h3>
@@ -76,30 +76,13 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Newsletter */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-background">{t.footer.stayUpdated}</h4>
-            <p className="text-background/80 text-sm leading-relaxed">
-              {t.footer.newsletterDescription}
-            </p>
-            <div className="space-y-2">
-              <input
-                type="email"
-                placeholder={t.footer.emailPlaceholder}
-                className="w-full px-3 py-2 bg-background/10 border border-background/20 rounded-md text-background placeholder-background/60 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2 px-4 rounded-md transition-colors duration-200 font-medium">
-                {t.footer.subscribe}
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-background/20 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-background/60 text-sm">{t.footer.copyright}</p>
           <div className="flex gap-6 text-sm text-background/60">
-   
+
 
           </div>
         </div>

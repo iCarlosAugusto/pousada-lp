@@ -21,7 +21,7 @@ export function TravelPackages() {
       id: 1,
       title: t.packages.chapadaAdventure.title,
       subtitle: t.packages.chapadaAdventure.subtitle,
-      image: "/stunning-chapada-dos-veadeiros-landscape-with-wate.jpg",
+      image: "/chapada_2025.png",
       duration: "7 Days",
       groupSize: "4-8 People",
       price: "R$1,299",
@@ -121,7 +121,7 @@ export function TravelPackages() {
       id: 2,
       title: t.packages.chileanPatagonia.title,
       subtitle: t.packages.chileanPatagonia.subtitle,
-      image: "/dramatic-torres-del-paine-peaks-with-glacial-lakes.jpg",
+      image: "/chapada_2026.png",
       duration: "10 Days",
       groupSize: "6-12 People",
       price: "R$2,499",
@@ -167,20 +167,7 @@ export function TravelPackages() {
           ]
         }
       ]
-    },
-    {
-      id: 3,
-      title: t.packages.amazonExpedition.title,
-      subtitle: t.packages.amazonExpedition.subtitle,
-      image: "/lush-amazon-rainforest-with-river-and-indigenous-b.jpg",
-      duration: "5 Days",
-      groupSize: "4-6 People",
-      price: "R$899",
-      rating: 5,
-      features: t.packages.amazonExpedition.features,
-      notIncluded: t.packages.amazonExpedition.notIncluded,
-      description: t.packages.amazonExpedition.description,
-    },
+    }
   ]
 
   return (
@@ -193,9 +180,9 @@ export function TravelPackages() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
           {packages.map((pkg) => (
-            <Card key={pkg.id} className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <Card key={pkg.id} className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group w-full max-w-sm">
               <div className="relative aspect-[5/3] overflow-hidden">
                 <img
                   src={pkg.image || "/placeholder.svg"}

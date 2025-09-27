@@ -192,7 +192,7 @@ const translations: Record<Language, Translations> = {
         certifications: ["Certified Professional Guide", "Wilderness First Aid", "Cultural Heritage Specialist"]
       },
       leandro: {
-        bio: "Leandro brings 10+ years of adventure guiding expertise, specializing in mountain expeditions and extreme sports. His deep knowledge of Chilean landscapes ensures safe, thrilling adventures.",
+        bio: "Leandro, mineiro from Chico Xavier Uberaba - MG, spiritual and ufologist and lover of the Pousada Villa Madeira and Life To Viagens, holistic therapist and ecotourism guide in Chapada dos Veadeiros for 6 years in Alto Paraíso working with experience tourism",
         specialties: ["Mountain Expeditions", "Extreme Sports", "Wildlife Tours"],
         certifications: ["Mountain Guide Certification", "Rescue Operations", "Adventure Sports Instructor"]
       }
@@ -355,7 +355,7 @@ const translations: Record<Language, Translations> = {
         certifications: ["Guia Profissional Certificada", "Primeiros Socorros na Natureza", "Especialista em Patrimônio Cultural"]
       },
       leandro: {
-        bio: "Leandro traz mais de 10 anos de experiência em guia de aventura, especializado em expedições de montanha e esportes radicais. Seu profundo conhecimento das paisagens chilenas garante aventuras seguras e emocionantes.",
+        bio: "Leandro, mineiro da terra de Chico Xavier Uberaba - MG, espírita e espiritualista e amante da ufologia, anfitrião da Pousada Villa Madeira e sócio na agência Life To Viagens, terapeuta holístico e guia de ecoturismo na Chapada dos Veadeiros está a 6 anos em Alto Paraíso trabalhando com turismo de experiências",
         specialties: ["Expedições de Montanha", "Esportes Radicais", "Tours de Vida Selvagem"],
         certifications: ["Certificação de Guia de Montanha", "Operações de Resgate", "Instrutor de Esportes de Aventura"]
       }
@@ -513,12 +513,12 @@ const translations: Record<Language, Translations> = {
       specialties: "Especialidades",
       certifications: "Certificaciones",
       Thays: {
-        bio: "Con más de 8 años de experiencia como guía, Thays se especializa en inmersión cultural y eco-aventuras. Su pasión por conectar viajeros con comunidades locales crea experiencias auténticas y transformadoras.",
+        bio: "A los 20 años, descubrí una afección cardíaca que cambió por completo mi perspectiva del mundo. Este evento me enseñó a valorar cada día como una oportunidad única. En 2016, viajé a Santa Catarina y pasé toda la temporada en Praia do Rosa. Desde entonces, he vivido en Pipa y Río de Janeiro, y ahora Chapada dos Veadeiros me ha llamado a vivir en el paraíso. En 2022, mi esposo, Leandro, y yo alquilamos una casa de huéspedes, abrimos una empresa de transporte para cascadas y también trabajamos como guías locales. Luego, en 2024, fundamos la agencia Life To Viagens con el propósito de brindar experiencias únicas a nuestros clientes a través de expediciones grupales y paquetes nacionales e internacionales personalizados. ¡Mi objetivo es mostrarte la sanación que existe en la naturaleza!",
         specialties: ["Tours Culturales", "Eco-Aventuras", "Tours Fotográficos"],
         certifications: ["Guía Profesional Certificada", "Primeros Auxilios en Naturaleza", "Especialista en Patrimonio Cultural"]
       },
       leandro: {
-        bio: "Leandro aporta más de 10 años de experiencia en guías de aventura, especializado en expediciones de montaña y deportes extremos. Su profundo conocimiento de los paisajes chilenos garantiza aventuras seguras y emocionantes.",
+        bio: "Leandro, mineiro oriundo de la tierra de Chico Xavier, Uberaba - MG, espiritualista y espiritista y amante de la ufología, hospedado en la Pousada Villa Madeira y socio de la agencia Life To Viagens, terapeuta holístico y guía de ecoturismo en la Chapada dos Veadeiros, está hace 6 años en Alto Paraíso trabajando con turismo experiencial.",
         specialties: ["Expediciones de Montaña", "Deportes Extremos", "Tours de Vida Silvestre"],
         certifications: ["Certificación de Guía de Montaña", "Operaciones de Rescate", "Instructor de Deportes de Aventura"]
       }

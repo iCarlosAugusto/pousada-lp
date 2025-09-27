@@ -20,28 +20,39 @@ export function LocationContact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-12">
           {/* Map Section */}
-
           <div className="space-y-6">
             <Card className="overflow-hidden shadow-lg">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-foreground">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  {t.contact.ourLocation}
+                  <div className="flex items-center justify-between w-full gap-2">
+                    <div className="flex items-center justify-center">
+                      <MapPin className="h-5 w-5 text-primary" />
+                       {t.contact.ourLocation}
+                    </div>
+
+                    <a
+                      href="https://www.google.com/maps/place/Villa+Madeira/@-14.1412969,-47.5192833,17z/data=!3m1!4b1!4m9!3m8!1s0x93457f53b7f23131:0x16ee39063abc0c30!5m2!4m1!1i2!8m2!3d-14.1412969!4d-47.516703!16s%2Fg%2F11f79wbtvm?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+                      className="text-primary underline"
+                    >
+                      Abrir no Google Maps →
+                    </a>
+                  </div>
+
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-0">
                 {/* Interactive Map */}
-                <div className="aspect-video bg-muted flex items-center justify-center">
-                  <div className="text-center text-muted-foreground">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.065486243059!2d-47.5192833!3d-14.1412969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93457f53b7f23131%3A0x16ee39063abc0c30!2sVilla%20Madeira!5e0!3m2!1spt-BR!2sbr!4v1727378456123!5m2!1spt-BR!2sbr"
-                      width="600"
-                      height="450"
-                      style={{ border: 0 }}
-                      allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                  </div>
+                <div className="aspect-video relative overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.065486243059!2d-47.5192833!3d-14.1412969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93457f53b7f23131%3A0x16ee39063abc0c30!2sVilla%20Madeira!5e0!3m2!1spt-BR!2sbr!4v1727378456123!5m2!1spt-BR!2sbr"
+                    className="absolute inset-0 w-full h-full border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Villa Madeira Location Map"
+                  ></iframe>
                 </div>
               </CardContent>
             </Card>
@@ -74,67 +85,6 @@ export function LocationContact() {
               {t.contact.whatsappButton}
             </Button>
           </div>
-
-          {/* Contact Form */}
-          <Card className="shadow-lg">
-            <CardHeader>
-              <CardTitle className="text-foreground">{t.contact.formTitle}</CardTitle>
-              <p className="text-muted-foreground">
-                {t.contact.formSubtitle}
-              </p>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-1">
-                    {t.contact.firstName}
-                  </label>
-                  <Input id="firstName" placeholder="Your first name" />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-1">
-                    {t.contact.lastName}
-                  </label>
-                  <Input id="lastName" placeholder="Your last name" />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">
-                  {t.contact.email}
-                </label>
-                <Input id="email" type="email" placeholder="your.email@example.com" />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1">
-                  {t.contact.phoneNumber}
-                </label>
-                <Input id="phone" type="tel" placeholder="+55 62 9940-2421" />
-              </div>
-
-              <div>
-                <label htmlFor="destination" className="block text-sm font-medium text-foreground mb-1">
-                  {t.contact.interestedDestination}
-                </label>
-                <Input id="destination" placeholder={t.contact.destinationPlaceholder} />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1">
-                  {t.contact.message}
-                </label>
-                <Textarea id="message" placeholder={t.contact.messagePlaceholder} rows={4} />
-              </div>
-
-              <Button
-                size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full shadow-md hover:shadow-lg transition-all duration-300"
-              >
-                {t.contact.sendMessage}
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
