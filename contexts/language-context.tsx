@@ -26,6 +26,7 @@ interface Translations {
     packages: string
     about: string
     contact: string
+    faq: string
   }
   
   // Hero Section
@@ -33,6 +34,16 @@ interface Translations {
     title: string
     subtitle: string
     ctaButton: string
+    yearsExperience: string
+    adventuresCompleted: string
+    satisfaction: string
+    bookAdventure: string
+    personalizedAdventures: string
+    experienceText: string
+    securityText: string
+    localGuidesText: string
+    deepKnowledge: string
+    totalSecurity: string
   }
   
   // About Guides
@@ -138,6 +149,15 @@ interface Translations {
     sendMessage: string
     destinationPlaceholder: string
     messagePlaceholder: string
+    locationBadge: string
+    openGoogleMaps: string
+    address: string
+    addressText: string
+    cityState: string
+    phoneSchedule: string
+    usefulInfo: string
+    nearCenter: string
+    easyAccess: string
   }
   
   // Footer
@@ -150,6 +170,11 @@ interface Translations {
     emailPlaceholder: string
     subscribe: string
     copyright: string
+    followAdventures: string
+    location: string
+    country: string
+    allRightsReserved: string
+    madeWithLove: string
   }
 }
 
@@ -174,12 +199,23 @@ const translations: Record<Language, Translations> = {
       destinations: "Destinations",
       packages: "Packages",
       about: "About",
-      contact: "Contact"
+      contact: "Contact",
+      faq: "FAQ"
     },
     hero: {
       title: "Discover Unique Travel Experiences",
       subtitle: "Join professional guides Thays and Leandro for unforgettable adventures that create lasting memories",
-      ctaButton: "Plan Your Trip Now"
+      ctaButton: "Plan Your Trip Now",
+      yearsExperience: "Years of Experience",
+      adventuresCompleted: "Adventures Completed",
+      satisfaction: "Satisfaction",
+      bookAdventure: "Book Adventure",
+      personalizedAdventures: "Personalized adventures for every traveler",
+      experienceText: "Unique Experience",
+      securityText: "Total Security",
+      localGuidesText: "Local Guides",
+      deepKnowledge: "Deep knowledge of the region",
+      totalSecurity: "Safety in all adventures"
     },
     aboutGuides: {
       title: "Meet Your Professional Guides",
@@ -304,7 +340,16 @@ const translations: Record<Language, Translations> = {
       message: "Message",
       sendMessage: "Send Message",
       destinationPlaceholder: "e.g., Chapada, Chilean Patagonia, Amazon",
-      messagePlaceholder: "Tell us about your dream adventure..."
+      messagePlaceholder: "Tell us about your dream adventure...",
+      locationBadge: "Chapada dos Veadeiros, Goiás",
+      openGoogleMaps: "Open in Google Maps",
+      address: "Address",
+      addressText: "R. Abílio Domingues, 5 - block 14 house 5 - Alto Paraíso de Goiás, GO, 73770-000",
+      cityState: "Alto Paraíso, Goiás, Brazil",
+      phoneSchedule: "Monday to Sunday, 7am to 10pm",
+      usefulInfo: "Useful Information",
+      nearCenter: "Near the center of Alto Paraíso",
+      easyAccess: "Easy access to main attractions"
     },
     footer: {
       description: "Creating unforgettable travel experiences with professional guides Thays and Leandro. Your adventure starts here.",
@@ -314,7 +359,12 @@ const translations: Record<Language, Translations> = {
       newsletterDescription: "Subscribe to get exclusive offers and travel tips from our expert guides.",
       emailPlaceholder: "Your email address",
       subscribe: "Subscribe",
-      copyright: "© 2024 Life To Viagens. All rights reserved."
+      copyright: "© 2024 Life To Viagens. All rights reserved.",
+      followAdventures: "Follow our adventures",
+      location: "Alto Paraíso, Goiás",
+      country: "Brazil",
+      allRightsReserved: "All rights reserved.",
+      madeWithLove: "Made with ❤️ by Carlos Augusto"
     }
   },
   PT: {
@@ -337,12 +387,23 @@ const translations: Record<Language, Translations> = {
       destinations: "Destinos",
       packages: "Pacotes",
       about: "Sobre",
-      contact: "Contato"
+      contact: "Contato",
+      faq: "FAQ"
     },
     hero: {
       title: "Descubra Experiências de Viagem Únicas",
       subtitle: "Junte-se aos guias profissionais Thays e Leandro para aventuras inesquecíveis que criam memórias duradouras",
-      ctaButton: "Planeje Sua Viagem Agora"
+      ctaButton: "Planeje Sua Viagem Agora",
+      yearsExperience: "Anos de Experiência",
+      adventuresCompleted: "Aventuras Realizadas",
+      satisfaction: "Satisfação",
+      bookAdventure: "Reservar Aventura",
+      personalizedAdventures: "Aventuras personalizadas para cada viajante",
+      experienceText: "Experiência Única",
+      securityText: "Segurança Total",
+      localGuidesText: "Guias Locais",
+      deepKnowledge: "Conhecimento profundo da região",
+      totalSecurity: "Segurança em todas as aventuras"
     },
     aboutGuides: {
       title: "Conheça Seus Guias Profissionais",
@@ -467,7 +528,16 @@ const translations: Record<Language, Translations> = {
       message: "Mensagem",
       sendMessage: "Enviar Mensagem",
       destinationPlaceholder: "ex: Chapada, Patagônia Chilena, Amazônia",
-      messagePlaceholder: "Conte-nos sobre sua aventura dos sonhos..."
+      messagePlaceholder: "Conte-nos sobre sua aventura dos sonhos...",
+      locationBadge: "Chapada dos Veadeiros, Goiás",
+      openGoogleMaps: "Abrir no Google Maps",
+      address: "Endereço",
+      addressText: "R. Abílio Domingues, 5 - quadra 14 casa 5 - Alto Paraíso de Goiás, GO, 73770-000",
+      cityState: "Alto Paraíso, Goiás, Brasil",
+      phoneSchedule: "Segunda a Domingo, 7h às 22h",
+      usefulInfo: "Informações Úteis",
+      nearCenter: "Próximo ao centro de Alto Paraíso",
+      easyAccess: "Acesso fácil aos principais atrativos"
     },
     footer: {
       description: "Criando experiências de viagem inesquecíveis com os guias profissionais Thays e Leandro. Sua aventura começa aqui.",
@@ -478,6 +548,11 @@ const translations: Record<Language, Translations> = {
       emailPlaceholder: "Seu endereço de email",
       subscribe: "Inscrever-se",
       copyright: "© 2024 Life To Viagens. Todos os direitos reservados.",
+      followAdventures: "Siga nossas aventuras",
+      location: "Alto Paraíso, Goiás",
+      country: "Brasil",
+      allRightsReserved: "Todos os direitos reservados.",
+      madeWithLove: "Feito com ❤️ por Carlos Augusto"
     }
   },
   ES: {
@@ -500,12 +575,23 @@ const translations: Record<Language, Translations> = {
       destinations: "Destinos",
       packages: "Paquetes",
       about: "Acerca",
-      contact: "Contacto"
+      contact: "Contacto",
+      faq: "FAQ"
     },
     hero: {
       title: "Descubre Experiencias de Viaje Únicas",
       subtitle: "Únete a los guías profesionales Thays y Leandro para aventuras inolvidables que crean recuerdos duraderos",
-      ctaButton: "Planifica Tu Viaje Ahora"
+      ctaButton: "Planifica Tu Viaje Ahora",
+      yearsExperience: "Años de Experiencia",
+      adventuresCompleted: "Aventuras Realizadas",
+      satisfaction: "Satisfacción",
+      bookAdventure: "Reservar Aventura",
+      personalizedAdventures: "Aventuras personalizadas para cada viajero",
+      experienceText: "Experiencia Única",
+      securityText: "Seguridad Total",
+      localGuidesText: "Guías Locales",
+      deepKnowledge: "Conocimiento profundo de la región",
+      totalSecurity: "Seguridad en todas las aventuras"
     },
     aboutGuides: {
       title: "Conoce a Tus Guías Profesionales",
@@ -630,7 +716,16 @@ const translations: Record<Language, Translations> = {
       message: "Mensaje",
       sendMessage: "Enviar Mensaje",
       destinationPlaceholder: "ej: Chapada, Patagonia Chilena, Amazonas",
-      messagePlaceholder: "Cuéntanos sobre tu aventura soñada..."
+      messagePlaceholder: "Cuéntanos sobre tu aventura soñada...",
+      locationBadge: "Chapada dos Veadeiros, Goiás",
+      openGoogleMaps: "Abrir en Google Maps",
+      address: "Dirección",
+      addressText: "R. Abílio Domingues, 5 - manzana 14 casa 5 - Alto Paraíso de Goiás, GO, 73770-000",
+      cityState: "Alto Paraíso, Goiás, Brasil",
+      phoneSchedule: "Lunes a Domingo, 7h a 22h",
+      usefulInfo: "Información Útil",
+      nearCenter: "Cerca del centro de Alto Paraíso",
+      easyAccess: "Fácil acceso a las principales atracciones"
     },
     footer: {
       description: "Creando experiencias de viaje inolvidables con los guías profesionales Thays y Leandro. Tu aventura comienza aquí.",
@@ -641,6 +736,11 @@ const translations: Record<Language, Translations> = {
       emailPlaceholder: "Tu dirección de email",
       subscribe: "Suscribirse",
       copyright: "© 2024 Life To Viagens. Todos los derechos reservados.",
+      followAdventures: "Sigue nuestras aventuras",
+      location: "Alto Paraíso, Goiás",
+      country: "Brasil",
+      allRightsReserved: "Todos los derechos reservados.",
+      madeWithLove: "Hecho con ❤️ por Carlos Augusto"
     }
   }
 }

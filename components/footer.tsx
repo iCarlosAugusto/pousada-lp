@@ -15,7 +15,7 @@ export function Footer() {
     { name: t.navigation.about, href: "#about" },
     { name: t.navigation.destinations, href: "#gallery" },
     { name: t.navigation.packages, href: "#packages" },
-    { name: "FAQ", href: "#faq" },
+    { name: t.navigation.faq, href: "#faq" },
     { name: t.navigation.contact, href: "#contact" },
   ]
 
@@ -42,7 +42,7 @@ export function Footer() {
             
             {/* Social Links */}
             <div className="space-y-4">
-              <h4 className="text-white font-semibold">Siga nossas aventuras</h4>
+              <h4 className="text-white font-semibold">{t.footer.followAdventures}</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -85,8 +85,8 @@ export function Footer() {
               <div className="group flex items-start gap-3 p-3 rounded-lg bg-slate-800/50 border border-slate-700/50 hover:border-emerald-400/30 transition-all duration-300">
                 <MapPin className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-white font-medium">Alto Paraíso, Goiás</p>
-                  <p className="text-slate-400 text-sm">Brazil</p>
+                  <p className="text-white font-medium">{t.footer.location}</p>
+                  <p className="text-slate-400 text-sm">{t.footer.country}</p>
                 </div>
               </div>
               
@@ -111,10 +111,10 @@ export function Footer() {
         <div className="border-t border-slate-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm flex items-center gap-1">
-              © 2024 Life to Viagens. Todos os direitos reservados.
+              © 2024 Life to Viagens. {t.footer.allRightsReserved}
             </p>
-            <p className="text-slate-400 text-sm flex items-center gap-1">
-              Feito com <Heart className="h-4 w-4 text-red-400 fill-current" /> por Carlos Augusto
+            <p className="text-slate-400 text-sm">
+              {t.footer.madeWithLove}
             </p>
           </div>
         </div>

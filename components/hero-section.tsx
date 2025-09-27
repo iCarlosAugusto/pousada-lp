@@ -51,15 +51,15 @@ export function HeroSection() {
             <div className="flex flex-wrap gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-emerald-400">3+</div>
-                <div className="text-sm text-gray-300">Anos de Experiência</div>
+                <div className="text-sm text-gray-300">{t.hero.yearsExperience}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">500+</div>
-                <div className="text-sm text-gray-300">Aventuras Realizadas</div>
+                <div className="text-sm text-gray-300">{t.hero.adventuresCompleted}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400">100%</div>
-                <div className="text-sm text-gray-300">Satisfação</div>
+                <div className="text-sm text-gray-300">{t.hero.satisfaction}</div>
               </div>
             </div>
 
@@ -89,8 +89,8 @@ export function HeroSection() {
                   <Star className="h-6 w-6 text-white fill-current" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold">Experiência Única</h3>
-                  <p className="text-gray-300 text-sm">Aventuras personalizadas para cada viajante</p>
+                  <h3 className="text-white font-semibold">{t.hero.experienceText}</h3>
+                  <p className="text-gray-300 text-sm">{t.hero.personalizedAdventures}</p>
                 </div>
               </div>
             </div>
@@ -101,8 +101,8 @@ export function HeroSection() {
                   <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold">Guias Locais</h3>
-                  <p className="text-gray-300 text-sm">Conhecimento profundo da região</p>
+                  <h3 className="text-white font-semibold">{t.hero.localGuidesText}</h3>
+                  <p className="text-gray-300 text-sm">{t.hero.deepKnowledge}</p>
                 </div>
               </div>
             </div>
@@ -113,8 +113,8 @@ export function HeroSection() {
                   <ArrowRight className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold">Segurança Total</h3>
-                  <p className="text-gray-300 text-sm">Equipamentos e treinamento certificados</p>
+                  <h3 className="text-white font-semibold">{t.hero.securityText}</h3>
+                  <p className="text-gray-300 text-sm">{t.hero.totalSecurity}</p>
                 </div>
               </div>
             </div>

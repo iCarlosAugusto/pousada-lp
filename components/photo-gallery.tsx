@@ -8,7 +8,6 @@ import { useLanguage } from "@/contexts/language-context"
 export function PhotoGallery() {
   const { t } = useLanguage()
   const [selectedCategory, setSelectedCategory] = useState(t.gallery.categories.all)
-
   const categories = [
     t.gallery.categories.all, 
     t.gallery.categories.cachoeiras,
