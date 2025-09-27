@@ -257,29 +257,50 @@ export function TravelPackages() {
                   {pkg.dates && pkg.dates.length > 0 && (
                     <div className="space-y-3">
                       <h4 className="font-medium text-foreground">{t.packages.availableDates}</h4>
-                      <div className="grid grid-cols-3 gap-2">
-                        {pkg.dates.flatMap((monthData) =>
-                          monthData.days.map((dateRange, dateIndex) => (
-                            <div
-                              key={`${monthData.month}-${dateIndex}`}
-                              className="bg-green-50 border border-green-200 rounded-lg p-2 text-center"
-                            >
-                              <div className="text-xs font-medium text-green-700 mb-1">
-                                {monthData.month}
-                              </div>
-                              <div className="text-xs text-green-600 leading-tight">
-                                {new Date(dateRange.start).toLocaleDateString(localeMap[language], {
-                                  day: '2-digit',
-                                  month: '2-digit'
-                                })} - {new Date(dateRange.end).toLocaleDateString(localeMap[language], {
-                                  day: '2-digit',
-                                  month: '2-digit'
-                                })}
-                              </div>
-                            </div>
-                          ))
-                        )}
-                      </div>
+                       <div className="grid grid-cols-3 gap-2">
+                         {pkg.dates.flatMap((monthData) =>
+                           monthData.days.map((dateRange, dateIndex) => {
+                             const endDate = new Date(dateRange.end + 'T23:59:59')
+                             const today = new Date()      
+                             const brasiliaToday = new Date(today.toLocaleString("en-US", {timeZone: "America/Sao_Paulo"}))
+                             const brasiliaEndDate = new Date(endDate.toLocaleString("en-US", {timeZone: "America/Sao_Paulo"}))
+                             
+                             const isPastDate = brasiliaEndDate < brasiliaToday
+                             
+                             return (
+                               <div
+                                 key={`${monthData.month}-${dateIndex}`}
+                                 className={`rounded-lg p-2 text-center border ${
+                                   isPastDate 
+                                     ? 'bg-gray-50 border-gray-200' 
+                                     : 'bg-green-50 border-green-200'
+                                 }`}
+                               >
+                                 <div className={`text-xs font-medium mb-1 ${
+                                   isPastDate 
+                                     ? 'text-gray-500 line-through' 
+                                     : 'text-green-700'
+                                 }`}>
+                                   {monthData.month}
+                                 </div>
+                                 <div className={`text-xs leading-tight ${
+                                   isPastDate 
+                                     ? 'text-gray-400 line-through' 
+                                     : 'text-green-600'
+                                 }`}>
+                                   {new Date(dateRange.start).toLocaleDateString(localeMap[language], {
+                                     day: '2-digit',
+                                     month: '2-digit'
+                                   })} - {new Date(dateRange.end).toLocaleDateString(localeMap[language], {
+                                     day: '2-digit',
+                                     month: '2-digit'
+                                   })}
+                                 </div>
+                               </div>
+                             )
+                           })
+                         )}
+                       </div>
                     </div>
                   )}
                 </div>
