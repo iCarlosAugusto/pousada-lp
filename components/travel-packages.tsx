@@ -8,14 +8,14 @@ import { useLanguage } from "@/contexts/language-context"
 
 export function TravelPackages() {
   const { t, language } = useLanguage()
-  
+
   // Locale mapping for date formatting
   const localeMap = {
     'EN': 'en-US',
     'PT': 'pt-BR',
     'ES': 'es-ES'
   }
-  
+
   const packages = [
     {
       id: 1,
@@ -77,7 +77,7 @@ export function TravelPackages() {
               start: "2025-07-19",
               end: "2025-07-24"
             },
-            
+
           ]
         },
         {
@@ -216,71 +216,73 @@ export function TravelPackages() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{pkg.description}</p>
               </CardHeader>
 
-              <CardContent className="space-y-4">
-                <div className="flex items-center justify-between text-sm text-muted-foreground">
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-4 w-4" />
-                    {pkg.duration}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Users className="h-4 w-4" />
-                    {pkg.groupSize}
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <h4 className="font-medium text-foreground">{t.packages.includedFeatures}</h4>
-                  <div className="grid grid-cols-2 gap-1">
-                    {pkg.features.map((feature, index) => (
-                      <div key={index} className="text-xs text-muted-foreground flex items-center gap-1">
-                        <div className="w-1 h-1 bg-primary rounded-full" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <h4 className="font-medium text-foreground">{t.packages.notIncludedIn}</h4>
-                  <div className="grid grid-cols-2 gap-1">
-                    {pkg.notIncluded?.map((feature, index) => (
-                      <div key={index} className="text-xs text-muted-foreground flex items-center gap-1">
-                        <div className="w-1 h-1 bg-primary rounded-full" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Available Dates */}
-                {pkg.dates && pkg.dates.length > 0 && (
-                  <div className="space-y-3">
-                    <h4 className="font-medium text-foreground">{t.packages.availableDates}</h4>
-                    <div className="grid grid-cols-3 gap-2">
-                      {pkg.dates.flatMap((monthData) =>
-                        monthData.days.map((dateRange, dateIndex) => (
-                          <div 
-                            key={`${monthData.month}-${dateIndex}`} 
-                            className="bg-green-50 border border-green-200 rounded-lg p-2 text-center"
-                          >
-                            <div className="text-xs font-medium text-green-700 mb-1">
-                              {monthData.month}
-                            </div>
-                            <div className="text-xs text-green-600 leading-tight">
-                              {new Date(dateRange.start).toLocaleDateString(localeMap[language], {
-                                day: '2-digit',
-                                month: '2-digit'
-                              })} - {new Date(dateRange.end).toLocaleDateString(localeMap[language], {
-                                day: '2-digit',
-                                month: '2-digit'
-                              })}
-                            </div>
-                          </div>
-                        ))
-                      )}
+              <CardContent className="flex flex-col h-full justify-between">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between text-sm text-muted-foreground">
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-4 w-4" />
+                      {pkg.duration}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Users className="h-4 w-4" />
+                      {pkg.groupSize}
                     </div>
                   </div>
-                )}
+
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-foreground">{t.packages.includedFeatures}</h4>
+                    <div className="grid grid-cols-2 gap-1">
+                      {pkg.features.map((feature, index) => (
+                        <div key={index} className="text-xs text-muted-foreground flex items-center gap-1">
+                          <div className="w-1 h-1 bg-primary rounded-full" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-foreground">{t.packages.notIncludedIn}</h4>
+                    <div className="grid grid-cols-2 gap-1">
+                      {pkg.notIncluded?.map((feature, index) => (
+                        <div key={index} className="text-xs text-muted-foreground flex items-center gap-1">
+                          <div className="w-1 h-1 bg-primary rounded-full" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Available Dates */}
+                  {pkg.dates && pkg.dates.length > 0 && (
+                    <div className="space-y-3">
+                      <h4 className="font-medium text-foreground">{t.packages.availableDates}</h4>
+                      <div className="grid grid-cols-3 gap-2">
+                        {pkg.dates.flatMap((monthData) =>
+                          monthData.days.map((dateRange, dateIndex) => (
+                            <div
+                              key={`${monthData.month}-${dateIndex}`}
+                              className="bg-green-50 border border-green-200 rounded-lg p-2 text-center"
+                            >
+                              <div className="text-xs font-medium text-green-700 mb-1">
+                                {monthData.month}
+                              </div>
+                              <div className="text-xs text-green-600 leading-tight">
+                                {new Date(dateRange.start).toLocaleDateString(localeMap[language], {
+                                  day: '2-digit',
+                                  month: '2-digit'
+                                })} - {new Date(dateRange.end).toLocaleDateString(localeMap[language], {
+                                  day: '2-digit',
+                                  month: '2-digit'
+                                })}
+                              </div>
+                            </div>
+                          ))
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
 
                 <div className="flex items-center justify-between pt-4 border-t border-border">
                   <div>

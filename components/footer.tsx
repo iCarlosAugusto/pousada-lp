@@ -1,6 +1,6 @@
 "use client"
 
-import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
 export function Footer() {
@@ -8,9 +8,7 @@ export function Footer() {
   
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+    { icon: Instagram, href: "https://www.instagram.com/lifetoviagens/", label: "Instagram" },
   ]
 
   const quickLinks = [
@@ -27,7 +25,7 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary">Adventure Guides</h3>
+            <h3 className="text-2xl font-bold text-primary">Life to Viagens</h3>
             <p className="text-background/80 leading-relaxed">
               {t.footer.description}
             </p>
@@ -101,15 +99,8 @@ export function Footer() {
         <div className="border-t border-background/20 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-background/60 text-sm">{t.footer.copyright}</p>
           <div className="flex gap-6 text-sm text-background/60">
-            <a href="#" className="hover:text-primary transition-colors duration-200">
-              {t.footer.privacyPolicy}
-            </a>
-            <a href="#" className="hover:text-primary transition-colors duration-200">
-              {t.footer.termsOfService}
-            </a>
-            <a href="#" className="hover:text-primary transition-colors duration-200">
-              {t.footer.cookiePolicy}
-            </a>
+   
+
           </div>
         </div>
       </div>

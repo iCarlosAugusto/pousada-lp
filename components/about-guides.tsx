@@ -10,11 +10,11 @@ export function AboutGuides() {
   
   const guides = [
     {
-      name: "Thayra",
+      name: "Thays",
       image: "/thais.png",
-      bio: t.aboutGuides.thayra.bio,
-      specialties: t.aboutGuides.thayra.specialties,
-      certifications: t.aboutGuides.thayra.certifications,
+      bio: t.aboutGuides.Thays.bio,
+      specialties: t.aboutGuides.Thays.specialties,
+      certifications: t.aboutGuides.Thays.certifications,
     },
     {
       name: "Leandro",

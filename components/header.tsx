@@ -30,7 +30,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary">Adventure Guides</h1>
+            <h1 className="text-2xl font-bold text-primary">Life to Viagens</h1>
           </div>
 
           {/* Desktop Navigation */}

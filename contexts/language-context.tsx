@@ -41,7 +41,7 @@ interface Translations {
     subtitle: string
     specialties: string
     certifications: string
-    thayra: {
+    Thays: {
       bio: string
       specialties: string[]
       certifications: string[]
@@ -150,9 +150,6 @@ interface Translations {
     emailPlaceholder: string
     subscribe: string
     copyright: string
-    privacyPolicy: string
-    termsOfService: string
-    cookiePolicy: string
   }
 }
 
@@ -181,7 +178,7 @@ const translations: Record<Language, Translations> = {
     },
     hero: {
       title: "Discover Unique Travel Experiences",
-      subtitle: "Join professional guides Thayra and Leandro for unforgettable adventures that create lasting memories",
+      subtitle: "Join professional guides Thays and Leandro for unforgettable adventures that create lasting memories",
       ctaButton: "Plan Your Trip Now"
     },
     aboutGuides: {
@@ -189,8 +186,8 @@ const translations: Record<Language, Translations> = {
       subtitle: "Our certified guides combine years of experience with genuine passion for creating unforgettable travel experiences",
       specialties: "Specialties",
       certifications: "Certifications",
-      thayra: {
-        bio: "With over 8 years of guiding experience, Thayra specializes in cultural immersion and eco-adventures. Her passion for connecting travelers with local communities creates authentic, transformative experiences.",
+      Thays: {
+        bio: "With over 8 years of guiding experience, Thays specializes in cultural immersion and eco-adventures. Her passion for connecting travelers with local communities creates authentic, transformative experiences.",
         specialties: ["Cultural Tours", "Eco-Adventures", "Photography Tours"],
         certifications: ["Certified Professional Guide", "Wilderness First Aid", "Cultural Heritage Specialist"]
       },
@@ -266,28 +263,28 @@ const translations: Record<Language, Translations> = {
       subtitle: "Find answers to common questions about our travel experiences and services",
       questions: [
         {
-          question: "What's included in the packages?",
-          answer: "All our packages include professional guide services, accommodation, meals as specified, transportation during the tour, entrance fees to attractions, and safety equipment. Specific inclusions vary by package - please check individual package details."
+          question: "How do I book an expedition?",
+          answer: "You can book by contacting us directly via WhatsApp."
         },
         {
-          question: "Are the guides certified?",
-          answer: "Yes, both Thayra and Leandro are certified professional guides with extensive training in wilderness first aid, rescue operations, and specialized certifications for their respective expertise areas. They have combined 18+ years of guiding experience."
+          question: "Can I split the payment of the expedition?",
+          answer: "Yes, we offer flexible payment options. You can split the payment by credit card in up to 12x or via PIX as long as the total payment is completed before the departure date."
         },
         {
-          question: "Can I travel with children?",
-          answer: "We welcome families and can customize experiences to be age-appropriate. Some adventures have minimum age requirements for safety reasons. Please contact us to discuss the best options for your family's needs."
+          question: "What's included in the expeditions?",
+          answer: "All our expeditions include all the activities described: transportation to and from the airport at the stipulated time, breakfast at the hotel, all tours of the itinerary and tourism guides. We also offer air travel separately, check prices with our agents."
         },
         {
-          question: "Do you offer group discounts?",
-          answer: "Yes, we offer attractive group discounts for parties of 6 or more people. Corporate groups and educational institutions receive additional discounts. Contact us for a customized quote based on your group size and requirements."
+          question: "Do I need a good physical condition to participate in the expeditions?",
+          answer: "Yes, we offer expeditions for different physical conditions. Contact us to choose the most appropriate one."
         },
         {
-          question: "What should I pack for the trips?",
-          answer: "We provide a detailed packing list upon booking confirmation. Generally, you'll need comfortable hiking boots, weather-appropriate clothing, sun protection, and personal items. We provide all specialized equipment like safety gear and camping equipment where needed."
+          question: "Can I travel alone or is it necessary to be in a group?",
+          answer: "Yes, you can travel alone! We create an atmosphere of warmth to meet new people during the trip."
         },
         {
-          question: "What's your cancellation policy?",
-          answer: "We offer flexible cancellation policies. Cancellations made 30+ days before departure receive full refund minus processing fees. 15-29 days: 50% refund. Less than 15 days: 25% refund. We also offer trip insurance options for additional protection."
+          question: "How are the leaders of the expeditions? Are there experienced guides?",
+          answer: "All our expeditions are led by highly experienced guides, ensuring safety and an enriching experience."
         }
       ]
     },
@@ -310,17 +307,14 @@ const translations: Record<Language, Translations> = {
       messagePlaceholder: "Tell us about your dream adventure..."
     },
     footer: {
-      description: "Creating unforgettable travel experiences with professional guides Thayra and Leandro. Your adventure starts here.",
+      description: "Creating unforgettable travel experiences with professional guides Thays and Leandro. Your adventure starts here.",
       quickLinks: "Quick Links",
       contactInfo: "Contact Info",
       stayUpdated: "Stay Updated",
       newsletterDescription: "Subscribe to get exclusive offers and travel tips from our expert guides.",
       emailPlaceholder: "Your email address",
       subscribe: "Subscribe",
-      copyright: "© 2024 Adventure Guides. All rights reserved.",
-      privacyPolicy: "Privacy Policy",
-      termsOfService: "Terms of Service",
-      cookiePolicy: "Cookie Policy"
+      copyright: "© 2024 Life To Viagens. All rights reserved."
     }
   },
   PT: {
@@ -347,7 +341,7 @@ const translations: Record<Language, Translations> = {
     },
     hero: {
       title: "Descubra Experiências de Viagem Únicas",
-      subtitle: "Junte-se aos guias profissionais Thayra e Leandro para aventuras inesquecíveis que criam memórias duradouras",
+      subtitle: "Junte-se aos guias profissionais Thays e Leandro para aventuras inesquecíveis que criam memórias duradouras",
       ctaButton: "Planeje Sua Viagem Agora"
     },
     aboutGuides: {
@@ -355,8 +349,8 @@ const translations: Record<Language, Translations> = {
       subtitle: "Nossos guias certificados combinam anos de experiência com paixão genuína por criar experiências de viagem inesquecíveis",
       specialties: "Especialidades",
       certifications: "Certificações",
-      thayra: {
-        bio: "Com mais de 8 anos de experiência como guia, Thayra é especializada em imersão cultural e eco-aventuras. Sua paixão por conectar viajantes com comunidades locais cria experiências autênticas e transformadoras.",
+      Thays: {
+        bio: "Com mais de 8 anos de experiência como guia, Thays é especializada em imersão cultural e eco-aventuras. Sua paixão por conectar viajantes com comunidades locais cria experiências autênticas e transformadoras.",
         specialties: ["Tours Culturais", "Eco-Aventuras", "Tours Fotográficos"],
         certifications: ["Guia Profissional Certificada", "Primeiros Socorros na Natureza", "Especialista em Patrimônio Cultural"]
       },
@@ -432,28 +426,28 @@ const translations: Record<Language, Translations> = {
       subtitle: "Encontre respostas para perguntas comuns sobre nossas experiências de viagem e serviços",
       questions: [
         {
-          question: "O que está incluído nos pacotes?",
-          answer: "Todos os nossos pacotes incluem serviços de guia profissional, acomodação, refeições conforme especificado, transporte durante o tour, taxas de entrada para atrações e equipamentos de segurança. As inclusões específicas variam por pacote - consulte os detalhes individuais do pacote."
+          question: "Como faço para reservar uma expedição?",
+          answer: "Você pode reservar entrando em contato conosco diretamente pelo WhatsApp."
         },
         {
-          question: "Os guias são certificados?",
-          answer: "Sim, tanto Thayra quanto Leandro são guias profissionais certificados com amplo treinamento em primeiros socorros na natureza, operações de resgate e certificações especializadas para suas respectivas áreas de expertise. Eles têm mais de 18 anos de experiência combinada como guias."
+          question: "É possível parcelar o valor da expedição?",
+          answer: "Sim, oferecemos parcelamento por carão de crédito em até 12x ou via PIX desde que o pagamento total seja concluído até a data da viagem."
         },
         {
-          question: "Posso viajar com crianças?",
-          answer: "Recebemos famílias e podemos personalizar experiências para serem adequadas à idade. Algumas aventuras têm requisitos mínimos de idade por razões de segurança. Entre em contato conosco para discutir as melhores opções para as necessidades de sua família."
+          question: "O que está incluído nas expedições?",
+          answer: "Nossas expedições incluem todas as atividades descritas: traslado ida e volta do aeroporto no horário estipulado, hospedagem café da manha, todos os passeios do roteiro e guias de turismo. Também oferecemos aéreo a parte, confira valores com nossos agentes."
         },
         {
-          question: "Vocês oferecem descontos para grupos?",
-          answer: "Sim, oferecemos descontos atrativos para grupos de 6 ou mais pessoas. Grupos corporativos e instituições educacionais recebem descontos adicionais. Entre em contato conosco para um orçamento personalizado baseado no tamanho do seu grupo e requisitos."
+          question: "Preciso ter uma boa condição física para participar das expedições?",
+          answer: "Oferecemos expedições para diferentes níveis de condicionamento físico. Entre em contato para escolher a mais adequada."
         },
         {
-          question: "O que devo levar para as viagens?",
-          answer: "Fornecemos uma lista detalhada de itens para levar após a confirmação da reserva. Geralmente, você precisará de botas de caminhada confortáveis, roupas adequadas ao clima, proteção solar e itens pessoais. Fornecemos todos os equipamentos especializados como equipamentos de segurança e camping quando necessário."
+          question: "Posso viajar sozinho ou é necessário estar em grupo?",
+          answer: "Sim, você pode viajar sozinho! Criamos uma atmosfera acolhedora para você conhecer novas pessoas durante a viagem."
         },
         {
-          question: "Qual é a política de cancelamento?",
-          answer: "Oferecemos políticas de cancelamento flexíveis. Cancelamentos feitos 30+ dias antes da partida recebem reembolso total menos taxas de processamento. 15-29 dias: 50% de reembolso. Menos de 15 dias: 25% de reembolso. Também oferecemos opções de seguro viagem para proteção adicional."
+          question: "Como são as lideranças das expedições? Há guias experientes?",
+          answer: "Todas as expedições são lideradas por guias altamente experientes, garantindo segurança e uma experiência enriquecedora."
         }
       ]
     },
@@ -476,17 +470,14 @@ const translations: Record<Language, Translations> = {
       messagePlaceholder: "Conte-nos sobre sua aventura dos sonhos..."
     },
     footer: {
-      description: "Criando experiências de viagem inesquecíveis com os guias profissionais Thayra e Leandro. Sua aventura começa aqui.",
+      description: "Criando experiências de viagem inesquecíveis com os guias profissionais Thays e Leandro. Sua aventura começa aqui.",
       quickLinks: "Links Rápidos",
       contactInfo: "Informações de Contato",
       stayUpdated: "Mantenha-se Atualizado",
       newsletterDescription: "Inscreva-se para receber ofertas exclusivas e dicas de viagem de nossos guias especialistas.",
       emailPlaceholder: "Seu endereço de email",
       subscribe: "Inscrever-se",
-      copyright: "© 2024 Adventure Guides. Todos os direitos reservados.",
-      privacyPolicy: "Política de Privacidade",
-      termsOfService: "Termos de Serviço",
-      cookiePolicy: "Política de Cookies"
+      copyright: "© 2024 Life To Viagens. Todos os direitos reservados.",
     }
   },
   ES: {
@@ -513,7 +504,7 @@ const translations: Record<Language, Translations> = {
     },
     hero: {
       title: "Descubre Experiencias de Viaje Únicas",
-      subtitle: "Únete a los guías profesionales Thayra y Leandro para aventuras inolvidables que crean recuerdos duraderos",
+      subtitle: "Únete a los guías profesionales Thays y Leandro para aventuras inolvidables que crean recuerdos duraderos",
       ctaButton: "Planifica Tu Viaje Ahora"
     },
     aboutGuides: {
@@ -521,8 +512,8 @@ const translations: Record<Language, Translations> = {
       subtitle: "Nuestros guías certificados combinan años de experiencia con pasión genuina por crear experiencias de viaje inolvidables",
       specialties: "Especialidades",
       certifications: "Certificaciones",
-      thayra: {
-        bio: "Con más de 8 años de experiencia como guía, Thayra se especializa en inmersión cultural y eco-aventuras. Su pasión por conectar viajeros con comunidades locales crea experiencias auténticas y transformadoras.",
+      Thays: {
+        bio: "Con más de 8 años de experiencia como guía, Thays se especializa en inmersión cultural y eco-aventuras. Su pasión por conectar viajeros con comunidades locales crea experiencias auténticas y transformadoras.",
         specialties: ["Tours Culturales", "Eco-Aventuras", "Tours Fotográficos"],
         certifications: ["Guía Profesional Certificada", "Primeros Auxilios en Naturaleza", "Especialista en Patrimonio Cultural"]
       },
@@ -598,28 +589,28 @@ const translations: Record<Language, Translations> = {
       subtitle: "Encuentra respuestas a preguntas comunes sobre nuestras experiencias de viaje y servicios",
       questions: [
         {
-          question: "¿Qué está incluido en los paquetes?",
-          answer: "Todos nuestros paquetes incluyen servicios de guía profesional, alojamiento, comidas según se especifica, transporte durante el tour, tarifas de entrada a atracciones y equipo de seguridad. Las inclusiones específicas varían por paquete - consulta los detalles individuales del paquete."
+          question: "¿Cómo puedo reservar una expedición?",
+          answer: "Puedes reservar entrando en contacto con nosotros directamente por WhatsApp."
         },
         {
-          question: "¿Los guías están certificados?",
-          answer: "Sí, tanto Thayra como Leandro son guías profesionales certificados con amplio entrenamiento en primeros auxilios en la naturaleza, operaciones de rescate y certificaciones especializadas para sus respectivas áreas de expertise. Tienen más de 18 años de experiencia combinada como guías."
+          question: "¿Puedo pagar la expedición en partes?",
+          answer: "Sí, ofrecemos opciones de pago flexibles. Puedes pagar en tarjeta de crédito en hasta 12x o via PIX siempre que el pago total se complete antes de la fecha de salida."
         },
         {
-          question: "¿Puedo viajar con niños?",
-          answer: "Damos la bienvenida a familias y podemos personalizar experiencias para que sean apropiadas para la edad. Algunas aventuras tienen requisitos mínimos de edad por razones de seguridad. Contáctanos para discutir las mejores opciones para las necesidades de tu familia."
+          question: "¿Qué está incluido en las expediciones?",
+          answer: "Nuestras expedições incluem todas as atividades descritas: traslado ida e volta do aeroporto no horário estipulado, hospedagem café da manha, todos os passeios do roteiro e guias de turismo. Também oferecemos aéreo a parte, confira valores com nossos agentes."
         },
         {
-          question: "¿Ofrecen descuentos para grupos?",
-          answer: "Sí, ofrecemos descuentos atractivos para grupos de 6 o más personas. Los grupos corporativos e instituciones educativas reciben descuentos adicionales. Contáctanos para una cotización personalizada basada en el tamaño de tu grupo y requisitos."
+          question: "¿Necesito una buena condición física para participar en las expediciones?",
+          answer: "Sí, oferecemos expedições para diferentes níveis de condicionamento físico. Entre em contato para escolher a mais adequada."
         },
         {
-          question: "¿Qué debo empacar para los viajes?",
-          answer: "Proporcionamos una lista detallada de empaque al confirmar la reserva. Generalmente, necesitarás botas de senderismo cómodas, ropa apropiada para el clima, protección solar y artículos personales. Proporcionamos todo el equipo especializado como equipo de seguridad y camping cuando sea necesario."
+          question: "¿Puedo viajar solo o es necesario estar en un grupo?",
+          answer: "Sim, você pode viajar sozinho! Criamos uma atmosfera acolhedora para você conhecer novas pessoas durante a viagem."
         },
         {
-          question: "¿Cuál es su política de cancelación?",
-          answer: "Ofrecemos políticas de cancelación flexibles. Las cancelaciones hechas 30+ días antes de la salida reciben reembolso completo menos las tarifas de procesamiento. 15-29 días: 50% de reembolso. Menos de 15 días: 25% de reembolso. También ofrecemos opciones de seguro de viaje para protección adicional."
+          question: "¿Cómo son las líderes de las expediciones? ¿Hay guías experimentados?",
+          answer: "Todas las expedições são lideradas por guias altamente experientes, garantizando segurança e uma experiência enriquecedora."
         }
       ]
     },
@@ -642,17 +633,14 @@ const translations: Record<Language, Translations> = {
       messagePlaceholder: "Cuéntanos sobre tu aventura soñada..."
     },
     footer: {
-      description: "Creando experiencias de viaje inolvidables con los guías profesionales Thayra y Leandro. Tu aventura comienza aquí.",
+      description: "Creando experiencias de viaje inolvidables con los guías profesionales Thays y Leandro. Tu aventura comienza aquí.",
       quickLinks: "Enlaces Rápidos",
       contactInfo: "Información de Contacto",
       stayUpdated: "Mantente Actualizado",
       newsletterDescription: "Suscríbete para recibir ofertas exclusivas y consejos de viaje de nuestros guías expertos.",
       emailPlaceholder: "Tu dirección de email",
       subscribe: "Suscribirse",
-      copyright: "© 2024 Adventure Guides. Todos los derechos reservados.",
-      privacyPolicy: "Política de Privacidad",
-      termsOfService: "Términos de Servicio",
-      cookiePolicy: "Política de Cookies"
+      copyright: "© 2024 Life To Viagens. Todos los derechos reservados.",
     }
   }
 }

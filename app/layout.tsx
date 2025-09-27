@@ -8,11 +8,11 @@ import { LanguageProvider } from "@/contexts/language-context"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Adventure Guides - Unique Travel Experiences with Thayra & Leandro",
+  title: "Life to Viagens - Unique Travel Experiences with Thays & Leandro",
   description:
-    "Discover unique travel experiences with professional guides Thayra and Leandro. Certified guides offering personalized adventures in Chile, Chapada, and beyond.",
+    "Discover unique travel experiences with professional guides Thays and Leandro. Certified guides offering personalized adventures in Chile, Chapada, and beyond.",
   keywords:
-    "travel agency, adventure guides, Chile travel, Chapada tours, professional travel guides, unique experiences",
+    "travel agency, life to viagens, Chile travel, Chapada tours, professional travel guides, unique experiences",
   generator: "v0.app",
 }
 
