@@ -6,6 +6,20 @@ export type Language = 'EN' | 'PT' | 'ES'
 
 interface Translations {
   // Header
+  months: {
+    january: string,
+    february: string,
+    march: string,
+    april: string,
+    may: string,
+    june: string,
+    july: string,
+    august: string,
+    september: string,
+    october: string,
+    november: string,
+    december: string
+  },
   navigation: {
     home: string
     destinations: string
@@ -45,7 +59,7 @@ interface Translations {
     subtitle: string
     categories: {
       all: string
-      mountains: string
+      cachoeiras: string
       culture: string
       wildlife: string
       adventure: string
@@ -62,28 +76,37 @@ interface Translations {
   packages: {
     title: string
     subtitle: string
+    notIncluded: string[],
+    notIncludedIn: string,
     perPerson: string
-    bookNow: string
-    includedFeatures: string
-    duration: string
-    groupSize: string
+      bookNow: string
+      includedFeatures: string
+      availableDates: string
+      duration: string
+      groupSize: string
     chapadaAdventure: {
+      notIncludedIn: string,
       title: string
       subtitle: string
       description: string
       features: string[]
+      notIncluded: string[]
     }
     chileanPatagonia: {
+      notIncludedIn: string,
       title: string
       subtitle: string
       description: string
       features: string[]
+      notIncluded: string[]
     }
     amazonExpedition: {
+      notIncludedIn: string,
       title: string
       subtitle: string
       description: string
       features: string[]
+      notIncluded: string[]
     }
   }
   
@@ -135,6 +158,20 @@ interface Translations {
 
 const translations: Record<Language, Translations> = {
   EN: {
+    months: {
+      january: "January",
+      february: "February",
+      march: "March",
+      april: "April",
+      may: "May",
+      june: "June",
+      july: "July",
+      august: "August",
+      september: "September",
+      october: "October",
+      november: "November",
+      december: "December"
+    },
     navigation: {
       home: "Home",
       destinations: "Destinations",
@@ -168,47 +205,60 @@ const translations: Record<Language, Translations> = {
       subtitle: "Explore stunning photos from our past adventures and get inspired for your next journey",
       categories: {
         all: "All",
-        mountains: "Mountains",
+        cachoeiras: "Cachoeiras",
         culture: "Culture",
         wildlife: "Wildlife",
         adventure: "Adventure"
       },
       photos: {
-        "1": { caption: "Sunrise at Chilean Andes", location: "Chile" },
-        "2": { caption: "Local Market Experience", location: "Chapada" },
+        "1": { caption: "Couros", location: "Alto Paraíso" },
+        "2": { caption: "Santa Barbara", location: "Alto Paraíso" },
         "3": { caption: "Wildlife Encounter", location: "Pantanal" },
         "4": { caption: "Rock Climbing Adventure", location: "Patagonia" },
         "5": { caption: "Cultural Ceremony", location: "Amazon" },
         "6": { caption: "Peak Expedition", location: "Torres del Paine" },
         "7": { caption: "River Rafting", location: "Bio Bio River" },
-        "8": { caption: "Tropical Birds", location: "Atlantic Forest" }
+        "8": { caption: "Tropical Birds", location: "Atlantic Forest" },
+        "9": { caption: "Starlight Tour", location: "Atlantic Forest" },
+        "10": { caption: "Couros Trail", location: "Atlantic Forest" },
+        "11": { caption: "Aldeia Indigena", location: "Atlantic Forest" },
+        "12": { caption: "Sunset", location: "Alto Paraíso" }
       }
     },
     packages: {
       title: "Our Travel Packages",
       subtitle: "Carefully crafted adventures designed to create unforgettable memories with professional guidance every step of the way",
       perPerson: "per person",
+      notIncluded: ["Entrance fees to attractions", "Any other meal not mentioned previously", "Airfare"],
       bookNow: "Book Now",
       includedFeatures: "Included Features:",
+      availableDates: "Available Dates",
       duration: "duration",
       groupSize: "group size",
+      notIncludedIn: "Not Included",
       chapadaAdventure: {
+        notIncludedIn: "Not Included",
         title: "Chapada Adventure",
         subtitle: "Professional Guide Included",
         description: "Explore the mystical landscapes of Chapada dos Veadeiros with crystal-clear waterfalls, ancient rock formations, and rich biodiversity.",
-        features: ["Waterfall Hiking", "Cave Exploration", "Local Culture Immersion", "Photography Workshop"]
+        features: ["Waterfall Hiking", "Cave Exploration", "Local Culture Immersion", "Photography Workshop"],
+        notIncluded: ["Entrance fees to attractions", "Any other meal not mentioned previously", "Airfare"]
       },
       chileanPatagonia: {
+        notIncludedIn: "Not Included",
         title: "Chilean Patagonia",
         subtitle: "All-Inclusive Plan",
         description: "Experience the raw beauty of Chilean Patagonia with iconic granite towers, pristine glaciers, and diverse wildlife in comfort.",
-        features: ["Torres del Paine Trek", "Glacier Viewing", "Wildlife Spotting", "Luxury Camping"]
+        features: ["Torres del Paine Trek", "Glacier Viewing", "Wildlife Spotting", "Luxury Camping"],
+        notIncluded: ["Entrance fees to attractions", "Any other meal not mentioned previously", "Airfare"]
       },
       amazonExpedition: {
+        notIncludedIn: "Not Included",
         title: "Amazon Expedition",
         subtitle: "Eco-Adventure Package",
         description: "Immerse yourself in the Amazon rainforest, meet indigenous communities, and witness incredible biodiversity in this eco-conscious adventure.",
-        features: ["River Navigation", "Indigenous Communities", "Wildlife Photography", "Sustainable Tourism"]
+        features: ["River Navigation", "Indigenous Communities", "Wildlife Photography", "Sustainable Tourism"],
+        notIncluded: ["Entrance fees to attractions", "Any other meal not mentioned previously", "Airfare"]
       }
     },
     faq: {
@@ -274,6 +324,20 @@ const translations: Record<Language, Translations> = {
     }
   },
   PT: {
+    months: {
+      january: "Janeiro",
+      february: "Fevereiro",
+      march: "Março",
+      april: "Abril",
+      may: "Maio",
+      june: "Junho",
+      july: "Julho",
+      august: "Agosto",
+      september: "Setembro",
+      october: "Outubro",
+      november: "Novembro",
+      december: "Dezembro"
+    },
     navigation: {
       home: "Início",
       destinations: "Destinos",
@@ -307,47 +371,60 @@ const translations: Record<Language, Translations> = {
       subtitle: "Explore fotos deslumbrantes de nossas aventuras passadas e inspire-se para sua próxima jornada",
       categories: {
         all: "Todas",
-        mountains: "Montanhas",
+        cachoeiras: "Cachoeiras",
         culture: "Cultura",
         wildlife: "Vida Selvagem",
         adventure: "Aventura"
       },
       photos: {
-        "1": { caption: "Nascer do Sol nos Andes Chilenos", location: "Chile" },
-        "2": { caption: "Experiência no Mercado Local", location: "Chapada" },
-        "3": { caption: "Encontro com Vida Selvagem", location: "Pantanal" },
+        "1": { caption: "Couros", location: "Alto Paraíso" },
+        "2": { caption: "Santa Barbara", location: "Alto Paraíso" },
+        "3": { caption: "Vale da Lua", location: "Alto Paraíso" },
         "4": { caption: "Aventura de Escalada", location: "Patagônia" },
-        "5": { caption: "Cerimônia Cultural", location: "Amazônia" },
+        "5": { caption: "Santa Barbara", location: "Alto Paraíso" },
         "6": { caption: "Expedição ao Pico", location: "Torres del Paine" },
-        "7": { caption: "Rafting no Rio", location: "Rio Bio Bio" },
-        "8": { caption: "Pássaros Tropicais", location: "Mata Atlântica" }
+        "7": { caption: "Cachoeira", location: "Rio Bio Bio" },
+        "8": { caption: "Pássaros Tropicais", location: "Mata Atlântica" },
+        "9": { caption: "Passeio Estelar", location: "Alto Paraíso" },
+        "10": { caption: "Trila em Couros", location: "Alto Paraíso" },
+        "11": { caption: "Aldeia Indigena", location: "Alto Paraíso" },
+        "12": { caption: "Por do Sol", location: "Alto Paraíso" }
       }
     },
     packages: {
       title: "Nossos Pacotes de Viagem",
       subtitle: "Aventuras cuidadosamente elaboradas para criar memórias inesquecíveis com orientação profissional a cada passo do caminho",
       perPerson: "por pessoa",
+      notIncluded: ["Entrada dos atrativos", "Qualquer outra refeição não citada anteriormente", "Passagens aéreas"],
       bookNow: "Reserve Agora",
       includedFeatures: "Recursos Inclusos:",
+      availableDates: "Datas Disponíveis",
       duration: "duração",
       groupSize: "tamanho do grupo",
+      notIncludedIn: "Não Incluído",
       chapadaAdventure: {
-        title: "Aventura na Chapada",
+        title: "Chapada dos Veadeiros - 2025",
         subtitle: "Guia Profissional Incluído",
         description: "Explore as paisagens místicas da Chapada dos Veadeiros com cachoeiras cristalinas, formações rochosas antigas e rica biodiversidade.",
-        features: ["Caminhada às Cachoeiras", "Exploração de Cavernas", "Imersão Cultural Local", "Workshop de Fotografia"]
+        features: ["Caminhada às Cachoeiras", "Exploração de Cavernas", "Imersão Cultural Local", "Workshop de Fotografia"],
+        notIncluded: ["Entrada dos atrativos", "Qualquer outra refeição não citada anteriormente", "Passagens aéreas"],
+        notIncludedIn: "Não Incluído"
       },
       chileanPatagonia: {
-        title: "Patagônia Chilena",
+        title: "Chapada dos Veadeiros - 2026",
         subtitle: "Plano Tudo Incluído",
         description: "Experimente a beleza selvagem da Patagônia Chilena com torres de granito icônicas, geleiras pristinas e vida selvagem diversificada com conforto.",
-        features: ["Trilha Torres del Paine", "Observação de Geleiras", "Avistamento de Vida Selvagem", "Camping de Luxo"]
+        features: ["Trilha Torres del Paine", "Observação de Geleiras", "Avistamento de Vida Selvagem", "Camping de Luxo"],
+        notIncluded: ["Entrada dos atrativos", "Qualquer outra refeição não citada anteriormente", "Passagens aéreas"],
+        notIncludedIn: "Não Incluído"
       },
       amazonExpedition: {
         title: "Expedição à Amazônia",
         subtitle: "Pacote Eco-Aventura",
         description: "Mergulhe na floresta amazônica, conheça comunidades indígenas e testemunhe a incrível biodiversidade nesta aventura eco-consciente.",
-        features: ["Navegação Fluvial", "Comunidades Indígenas", "Fotografia da Vida Selvagem", "Turismo Sustentável"]
+        features: ["Navegação Fluvial", "Comunidades Indígenas", "Fotografia da Vida Selvagem", "Turismo Sustentável"],
+        notIncluded: ["Entrada dos atrativos", "Qualquer outra refeição não citada anteriormente", "Passagens aéreas"],
+        notIncludedIn: "Não Incluído"
       }
     },
     faq: {
@@ -413,6 +490,20 @@ const translations: Record<Language, Translations> = {
     }
   },
   ES: {
+    months: {
+      january: "Enero",
+      february: "Febrero",
+      march: "Marzo",
+      april: "Abril",
+      may: "Mayo",
+      june: "Junio",
+      july: "Julio",
+      august: "Agosto",
+      september: "Septiembre",
+      october: "Octubre",
+      november: "Noviembre",
+      december: "Diciembre"
+    },
     navigation: {
       home: "Inicio",
       destinations: "Destinos",
@@ -446,7 +537,7 @@ const translations: Record<Language, Translations> = {
       subtitle: "Explora fotos impresionantes de nuestras aventuras pasadas e inspírate para tu próximo viaje",
       categories: {
         all: "Todas",
-        mountains: "Montañas",
+        cachoeiras: "Cachoeiras",
         culture: "Cultura",
         wildlife: "Vida Silvestre",
         adventure: "Aventura"
@@ -459,34 +550,47 @@ const translations: Record<Language, Translations> = {
         "5": { caption: "Ceremonia Cultural", location: "Amazonas" },
         "6": { caption: "Expedición al Pico", location: "Torres del Paine" },
         "7": { caption: "Rafting en Río", location: "Río Bio Bio" },
-        "8": { caption: "Aves Tropicales", location: "Bosque Atlántico" }
+        "8": { caption: "Aves Tropicales", location: "Bosque Atlántico" },
+        "9": { caption: "Paseo Estelar", location: "Bosque Atlántico" },
+        "10": { caption: "Trilha en Couros", location: "Bosque Atlántico" },
+        "11": { caption: "Aldeia Indigena", location: "Bosque Atlántico" },
+        "12": { caption: "Puesta de Sol", location: "Bosque Atlántico" }
       }
     },
     packages: {
       title: "Nuestros Paquetes de Viaje",
       subtitle: "Aventuras cuidadosamente elaboradas diseñadas para crear recuerdos inolvidables con orientación profesional en cada paso del camino",
       perPerson: "por persona",
+      notIncluded: ["Entrada de atracciones", "Cualquier otra comida no mencionada anteriormente", "Pasajes aéreos"],
       bookNow: "Reservar Ahora",
       includedFeatures: "Características Incluidas:",
+      availableDates: "Fechas Disponibles",
       duration: "duración",
       groupSize: "tamaño del grupo",
+      notIncludedIn: "No Incluido",
       chapadaAdventure: {
         title: "Aventura en Chapada",
         subtitle: "Guía Profesional Incluido",
         description: "Explora los paisajes místicos de Chapada dos Veadeiros con cascadas cristalinas, formaciones rocosas antiguas y rica biodiversidad.",
-        features: ["Senderismo a Cascadas", "Exploración de Cuevas", "Inmersión Cultural Local", "Taller de Fotografía"]
+        features: ["Senderismo a Cascadas", "Exploración de Cuevas", "Inmersión Cultural Local", "Taller de Fotografía"],
+        notIncluded: ["Entrada de atracciones", "Cualquier otra comida no mencionada anteriormente", "Pasajes aéreos"],
+        notIncludedIn: "No Incluido"
       },
       chileanPatagonia: {
         title: "Patagonia Chilena",
         subtitle: "Plan Todo Incluido",
         description: "Experimenta la belleza salvaje de la Patagonia Chilena con torres de granito icónicas, glaciares prístinos y vida silvestre diversa con comodidad.",
-        features: ["Trekking Torres del Paine", "Observación de Glaciares", "Avistamiento de Vida Silvestre", "Camping de Lujo"]
+        features: ["Trekking Torres del Paine", "Observación de Glaciares", "Avistamiento de Vida Silvestre", "Camping de Lujo"],
+        notIncluded: ["Entrada de atracciones", "Cualquier otra comida no mencionada anteriormente", "Pasajes aéreos"],
+        notIncludedIn: "No Incluido"
       },
       amazonExpedition: {
         title: "Expedición al Amazonas",
         subtitle: "Paquete Eco-Aventura",
         description: "Sumérgete en la selva amazónica, conoce comunidades indígenas y presencia la increíble biodiversidad en esta aventura eco-consciente.",
-        features: ["Navegación Fluvial", "Comunidades Indígenas", "Fotografía de Vida Silvestre", "Turismo Sostenible"]
+        features: ["Navegación Fluvial", "Comunidades Indígenas", "Fotografía de Vida Silvestre", "Turismo Sostenible"],
+        notIncluded: ["Entrada de atracciones", "Cualquier otra comida no mencionada anteriormente", "Pasajes aéreos"],
+        notIncludedIn: "No Incluido"
       }
     },
     faq: {

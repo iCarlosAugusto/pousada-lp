@@ -11,8 +11,7 @@ export function PhotoGallery() {
 
   const categories = [
     t.gallery.categories.all, 
-    t.gallery.categories.mountains, 
-    t.gallery.categories.culture, 
+    t.gallery.categories.cachoeiras,
     t.gallery.categories.wildlife, 
     t.gallery.categories.adventure
   ]
@@ -20,59 +19,59 @@ export function PhotoGallery() {
   const photos = [
     {
       id: 1,
-      src: "/breathtaking-mountain-sunrise-in-chilean-andes-wit.jpg",
+      src: "/cachoeiras/couros.png",
       caption: t.gallery.photos["1"].caption,
-      category: t.gallery.categories.mountains,
+      category: t.gallery.categories.cachoeiras,
       location: t.gallery.photos["1"].location,
     },
     {
       id: 2,
-      src: "/colorful-traditional-market-with-local-people-and-.jpg",
+      src: "/cachoeiras/santa_barbara.png",
       caption: t.gallery.photos["2"].caption,
-      category: t.gallery.categories.culture,
+      category: t.gallery.categories.cachoeiras,
       location: t.gallery.photos["2"].location,
     },
     {
       id: 3,
-      src: "/exotic-wildlife-jaguar-in-natural-habitat.jpg",
+      src: "/cachoeiras/vale_da_lua.png",
       caption: t.gallery.photos["3"].caption,
-      category: t.gallery.categories.wildlife,
+      category: t.gallery.categories.cachoeiras,
       location: t.gallery.photos["3"].location,
     },
     {
-      id: 4,
-      src: "/rock-climbing-adventure-on-dramatic-cliff-face.jpg",
-      caption: t.gallery.photos["4"].caption,
-      category: t.gallery.categories.adventure,
-      location: t.gallery.photos["4"].location,
-    },
-    {
-      id: 5,
-      src: "/traditional-cultural-ceremony-with-local-indigenou.jpg",
-      caption: t.gallery.photos["5"].caption,
-      category: t.gallery.categories.culture,
-      location: t.gallery.photos["5"].location,
-    },
-    {
-      id: 6,
-      src: "/dramatic-mountain-peak-with-snow-and-clouds.jpg",
-      caption: t.gallery.photos["6"].caption,
-      category: t.gallery.categories.mountains,
-      location: t.gallery.photos["6"].location,
-    },
-    {
       id: 7,
-      src: "/whitewater-rafting-adventure-with-excited-traveler.jpg",
+      src: "/cachoeiras/cachoeira_2.png",
       caption: t.gallery.photos["7"].caption,
-      category: t.gallery.categories.adventure,
+      category: t.gallery.categories.cachoeiras,
       location: t.gallery.photos["7"].location,
     },
     {
-      id: 8,
-      src: "/colorful-tropical-birds-in-lush-rainforest-canopy.jpg",
-      caption: t.gallery.photos["8"].caption,
+      id: 9,
+      src: "/passeio_estelar.png",
+      caption: t.gallery.photos["9"].caption,
+      category: t.gallery.categories.adventure,
+      location: t.gallery.photos["9"].location,
+    },
+    {
+      id: 10,
+      src: "/trilha_couros.png",
+      caption: t.gallery.photos["10"].caption,
       category: t.gallery.categories.wildlife,
-      location: t.gallery.photos["8"].location,
+      location: t.gallery.photos["10"].location,
+    },
+    {
+      id: 11,
+      src: "/indio.png",
+      caption: t.gallery.photos["11"].caption,
+      category: t.gallery.categories.wildlife,
+      location: t.gallery.photos["11"].location,
+    },
+    {
+      id: 12,
+      src: "/por_do_sol.png",
+      caption: t.gallery.photos["12"].caption,
+      category: t.gallery.categories.adventure,
+      location: t.gallery.photos["12"].location,
     },
   ]
 

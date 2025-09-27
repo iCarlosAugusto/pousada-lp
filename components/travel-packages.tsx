@@ -7,7 +7,14 @@ import { Clock, Users, Star } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
 export function TravelPackages() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  
+  // Locale mapping for date formatting
+  const localeMap = {
+    'EN': 'en-US',
+    'PT': 'pt-BR',
+    'ES': 'es-ES'
+  }
   
   const packages = [
     {
@@ -17,10 +24,98 @@ export function TravelPackages() {
       image: "/stunning-chapada-dos-veadeiros-landscape-with-wate.jpg",
       duration: "7 Days",
       groupSize: "4-8 People",
-      price: "$1,299",
-      rating: 4.9,
+      price: "R$1,299",
+      rating: 5,
       features: t.packages.chapadaAdventure.features,
+      notIncluded: t.packages.chapadaAdventure.notIncluded,
       description: t.packages.chapadaAdventure.description,
+      dates: [
+        {
+          month: t.months.january,
+          days: [
+            {
+              start: "2025-01-08",
+              end: "2025-01-12"
+            }
+          ]
+        },
+        {
+          month: t.months.february,
+          days: [
+            {
+              start: "2025-02-14",
+              end: "2025-02-18"
+            }
+          ]
+        },
+        {
+          month: t.months.may,
+          days: [
+            {
+              start: "2025-05-26",
+              end: "2025-05-31"
+            }
+          ]
+        },
+        {
+          month: t.months.june,
+          days: [
+            {
+              start: "2025-06-23",
+              end: "2025-06-28"
+            }
+          ]
+        },
+        {
+          month: t.months.july,
+          days: [
+            {
+              start: "2025-07-07",
+              end: "2025-07-12"
+            },
+            {
+              start: "2025-07-19",
+              end: "2025-07-24"
+            },
+            
+          ]
+        },
+        {
+          month: t.months.august,
+          days: [
+            {
+              start: "2025-08-13",
+              end: "2025-08-17"
+            },
+            {
+              start: "2025-08-26",
+              end: "2025-08-30"
+            }
+          ]
+        },
+        {
+          month: t.months.september,
+          days: [
+            {
+              start: "2025-09-15",
+              end: "2025-09-20"
+            }
+          ]
+        },
+        {
+          month: t.months.october,
+          days: [
+            {
+              start: "2025-10-01",
+              end: "2025-10-04"
+            },
+            {
+              start: "2025-10-08",
+              end: "2025-10-12"
+            }
+          ]
+        }
+      ]
     },
     {
       id: 2,
@@ -29,10 +124,49 @@ export function TravelPackages() {
       image: "/dramatic-torres-del-paine-peaks-with-glacial-lakes.jpg",
       duration: "10 Days",
       groupSize: "6-12 People",
-      price: "$2,499",
-      rating: 4.8,
+      price: "R$2,499",
+      rating: 5,
       features: t.packages.chileanPatagonia.features,
+      notIncluded: t.packages.chileanPatagonia.notIncluded,
       description: t.packages.chileanPatagonia.description,
+      dates: [
+        {
+          month: t.months.january,
+          days: [
+            {
+              start: "2026-01-08",
+              end: "2026-01-12"
+            }
+          ]
+        },
+        {
+          month: t.months.february,
+          days: [
+            {
+              start: "2026-02-14",
+              end: "2026-02-18"
+            }
+          ]
+        },
+        {
+          month: t.months.may,
+          days: [
+            {
+              start: "2026-03-26",
+              end: "2026-03-28"
+            }
+          ]
+        },
+        {
+          month: t.months.june,
+          days: [
+            {
+              start: "2026-06-23",
+              end: "2026-06-28"
+            }
+          ]
+        }
+      ]
     },
     {
       id: 3,
@@ -41,9 +175,10 @@ export function TravelPackages() {
       image: "/lush-amazon-rainforest-with-river-and-indigenous-b.jpg",
       duration: "5 Days",
       groupSize: "4-6 People",
-      price: "$899",
-      rating: 4.7,
+      price: "R$899",
+      rating: 5,
       features: t.packages.amazonExpedition.features,
+      notIncluded: t.packages.amazonExpedition.notIncluded,
       description: t.packages.amazonExpedition.description,
     },
   ]
@@ -104,6 +239,48 @@ export function TravelPackages() {
                     ))}
                   </div>
                 </div>
+
+                <div className="space-y-2">
+                  <h4 className="font-medium text-foreground">{t.packages.notIncludedIn}</h4>
+                  <div className="grid grid-cols-2 gap-1">
+                    {pkg.notIncluded?.map((feature, index) => (
+                      <div key={index} className="text-xs text-muted-foreground flex items-center gap-1">
+                        <div className="w-1 h-1 bg-primary rounded-full" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Available Dates */}
+                {pkg.dates && pkg.dates.length > 0 && (
+                  <div className="space-y-3">
+                    <h4 className="font-medium text-foreground">{t.packages.availableDates}</h4>
+                    <div className="grid grid-cols-3 gap-2">
+                      {pkg.dates.flatMap((monthData) =>
+                        monthData.days.map((dateRange, dateIndex) => (
+                          <div 
+                            key={`${monthData.month}-${dateIndex}`} 
+                            className="bg-green-50 border border-green-200 rounded-lg p-2 text-center"
+                          >
+                            <div className="text-xs font-medium text-green-700 mb-1">
+                              {monthData.month}
+                            </div>
+                            <div className="text-xs text-green-600 leading-tight">
+                              {new Date(dateRange.start).toLocaleDateString(localeMap[language], {
+                                day: '2-digit',
+                                month: '2-digit'
+                              })} - {new Date(dateRange.end).toLocaleDateString(localeMap[language], {
+                                day: '2-digit',
+                                month: '2-digit'
+                              })}
+                            </div>
+                          </div>
+                        ))
+                      )}
+                    </div>
+                  </div>
+                )}
 
                 <div className="flex items-center justify-between pt-4 border-t border-border">
                   <div>

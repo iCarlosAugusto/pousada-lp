@@ -73,20 +73,6 @@ export function AboutGuides() {
                       ))}
                     </div>
                   </div>
-
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                      <Award className="h-4 w-4 text-primary" />
-                      {t.aboutGuides.certifications}
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {guide.certifications.map((cert, i) => (
-                        <Badge key={i} variant="outline" className="text-xs">
-                          {cert}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </CardContent>
             </Card>

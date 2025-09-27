@@ -15,7 +15,6 @@ export function HeroSection() {
         className="absolute inset-0 w-full h-full object-contain"
       />
 
-      {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance">
           {t.hero.title}

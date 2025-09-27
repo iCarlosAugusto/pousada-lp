@@ -9,7 +9,7 @@ import { useLanguage } from "@/contexts/language-context"
 
 export function LocationContact() {
   const { t } = useLanguage()
-  
+
   return (
     <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,6 +22,7 @@ export function LocationContact() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Map Section */}
+
           <div className="space-y-6">
             <Card className="overflow-hidden shadow-lg">
               <CardHeader>
@@ -31,11 +32,15 @@ export function LocationContact() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-0">
+                {/* Interactive Map */}
                 <div className="aspect-video bg-muted flex items-center justify-center">
                   <div className="text-center text-muted-foreground">
-                    <MapPin className="h-12 w-12 mx-auto mb-2 text-primary" />
-                    <p className="font-medium">Interactive Map</p>
-                    <p className="text-sm">São Paulo, Brazil</p>
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.065486243059!2d-47.5192833!3d-14.1412969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93457f53b7f23131%3A0x16ee39063abc0c30!2sVilla%20Madeira!5e0!3m2!1spt-BR!2sbr!4v1727378456123!5m2!1spt-BR!2sbr"
+                      width="600"
+                      height="450"
+                      style={{ border: 0 }}
+                      allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                   </div>
                 </div>
               </CardContent>
@@ -47,7 +52,7 @@ export function LocationContact() {
                 <CardContent className="p-6 text-center">
                   <Phone className="h-8 w-8 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold text-foreground mb-2">{t.contact.phone}</h3>
-                  <p className="text-muted-foreground">+55 11 9999-8888</p>
+                  <p className="text-muted-foreground">+55 62 9940-2421</p>
                 </CardContent>
               </Card>
 
@@ -105,7 +110,7 @@ export function LocationContact() {
                 <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1">
                   {t.contact.phoneNumber}
                 </label>
-                <Input id="phone" type="tel" placeholder="+55 11 99999-9999" />
+                <Input id="phone" type="tel" placeholder="+55 62 9940-2421" />
               </div>
 
               <div>
